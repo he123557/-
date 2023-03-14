@@ -1,0 +1,26 @@
+server:
+  #设置端口号
+  port: 8080
+
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reggie
+      username: root
+      password: 123456
+
+mybatis-plus:
+  type-aliases-package: com.hj.reggie.backend.bean
+  configuration:
+    #开启驼峰自动命名
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #id采用雪花算法自动生成
+      id-type: assign_id
+#自定义文件路径
+reggie:
+  path: D:\\downloads\\1 瑞吉外卖项目\\img\\
